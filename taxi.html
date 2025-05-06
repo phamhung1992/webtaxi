@@ -1,0 +1,456 @@
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Taxi Út Hùng - Dịch vụ taxi uy tín</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+        background-color: #ffffff;
+      }
+      header {
+        position: relative;
+        overflow: visible;
+      }
+      /* Container for the moving icon */
+      .icon-runner-container {
+        position: fixed;
+        top: 20px;
+        left: -60px; /* start off screen */
+        width: 60px;
+        height: 60px;
+        pointer-events: none;
+        z-index: 1000;
+        border-radius: 50%;
+        overflow: hidden;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+        background: white;
+        animation: moveIconCircle 6s linear infinite;
+      }
+      @keyframes moveIconCircle {
+        0% {
+          left: -60px;
+          opacity: 1;
+        }
+        90% {
+          opacity: 1;
+        }
+        100% {
+          left: calc(100% + 60px);
+          opacity: 0;
+        }
+      }
+      .icon-runner-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+        border-radius: 50%;
+      }
+      #bookingVideo {
+        height: 100%:
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body class="text-gray-800 bg-white">
+    <div
+      class="icon-runner-container"
+      aria-hidden="true"
+      role="img"
+      aria-label="Biểu tượng xe taxi màu vàng Taxi Út Hùng"
+    >
+      <img
+        src="https://storage.googleapis.com/a1aa/image/e0ad02b1-2314-4281-bdd9-8b1f6916c040.jpg"
+        alt="Biểu tượng xe taxi màu vàng Taxi Út Hùng tách nền, xe hiện đại"
+      />
+    </div>
+    <header class="bg-yellow-400 shadow-md">
+      <div
+        class="container mx-auto flex flex-col md:flex-row items-center justify-between p-4 relative"
+      >
+        <div class="flex items-center space-x-3 z-10">
+          <img
+            alt="Logo Taxi Út Hùng màu vàng và đen, biểu tượng xe taxi hiện đại"
+            class="rounded-full"
+            height="60"
+            src="https://storage.googleapis.com/a1aa/image/e0ad02b1-2314-4281-bdd9-8b1f6916c040.jpg"
+            width="60"
+          />
+          <h1 class="text-2xl font-bold text-white">Taxi Út Hùng</h1>
+        </div>
+        <nav class="mt-3 md:mt-0 z-10">
+          <ul class="flex space-x-6 text-white font-semibold">
+            <li id="nav-service">
+              <a class="hover:underline" href="#service">Dịch vụ</a>
+            </li>
+            <li><a class="hover:underline" href="#booking-video">Đặt xe</a></li>
+            <li><a class="hover:underline" href="#reviews">Đánh giá</a></li>
+            <li><a class="hover:underline" href="#gallery">Hình ảnh</a></li>
+            <li id="nav-contact">
+              <a class="hover:underline" href="#contact">Liên hệ</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="container mx-auto px-4 py-8">
+      <section class="text-center mb-12" id="hero">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-yellow-500 mb-4">
+          Taxi Út Hùng - Đưa bạn đến mọi nơi an toàn &amp; nhanh chóng
+        </h2>
+        <p class="text-lg md:text-xl max-w-3xl mx-auto text-gray-700">
+          Dịch vụ taxi uy tín, giá cả hợp lý, tài xế thân thiện, phục vụ 24/7.
+        </p>
+        <div class="mt-6 flex justify-center space-x-6">
+          <a
+            aria-label="Gọi Taxi Út Hùng số 0965 028 081"
+            class="inline-flex items-center bg-yellow-500 hover:bg-yellow-600 text-white font-semibold px-6 py-3 rounded shadow"
+            href="tel:0965028081"
+          >
+            <i class="fas fa-phone-alt mr-2"></i>Gọi ngay: 0965 028 081
+          </a>
+          <a
+            aria-label="Liên hệ Zalo Taxi Út Hùng số 0965 028 081"
+            class="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded shadow"
+            href="https://zalo.me/0965028081"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <i class="fab fa-facebook-messenger mr-2"></i>Zalo: 0965 028 081
+          </a>
+        </div>
+      </section>
+      <section class="mb-16" id="service">
+        <h3 class="text-3xl font-bold text-yellow-500 mb-8 text-center">
+          Dịch vụ của chúng tôi
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="bg-white rounded-lg shadow p-6 flex flex-col items-center text-center"
+          >
+            <img
+              alt="Xe taxi 4 chỗ màu vàng hiện đại đỗ trên đường phố thành phố về đêm"
+              class="mb-4 rounded"
+              height="150"
+              src="./ảnh/xetaxi4chouthung.jpg.jpg"
+              width="150"
+            />
+            <h4 class="text-xl font-semibold mb-2">Taxi 4 chỗ</h4>
+            <p class="text-gray-600">
+              Phù hợp cho cá nhân hoặc gia đình nhỏ, xe đời mới, sạch sẽ, tài xế
+              thân thiện.
+            </p>
+          </div>
+          <div
+            class="bg-white rounded-lg shadow p-6 flex flex-col items-center text-center"
+          >
+            <img
+              alt="Xe taxi 7 chỗ màu vàng sang trọng đỗ trước khách sạn hiện đại"
+              class="mb-4 rounded"
+              height="150"
+              src="./ảnh/pexels-mikebirdy-116675.jpg"
+              width="150"
+            />
+            <h4 class="text-xl font-semibold mb-2">Taxi 7 chỗ</h4>
+            <p class="text-gray-600">
+              Lựa chọn lý tưởng cho nhóm bạn hoặc gia đình lớn, không gian rộng
+              rãi, thoải mái.
+            </p>
+          </div>
+          <div
+            class="bg-white rounded-lg shadow p-6 flex flex-col items-center text-center"
+          >
+            <img
+              alt="Xe taxi màu vàng đưa đón khách tại sân bay hiện đại với hành lý"
+              class="mb-4 rounded"
+              height="150"
+              src="./ảnh/ãnhxe$ngướiúthùngđạidiện.jpg.jpg"
+              width="150"
+            />
+            <h4 class="text-xl font-semibold mb-2">Đưa đón sân bay</h4>
+            <p class="text-gray-600">
+              Dịch vụ đưa đón sân bay đúng giờ, tài xế chuyên nghiệp, hỗ trợ
+              hành lý tận tình.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="mb-16" id="booking-video">
+        <h3 class="text-3xl font-bold text-yellow-500 mb-8 text-center">
+          Video minh họa khách đặt xe
+        </h3>
+        <div
+          class="max-w-466.41x824 mx-auto aspect-video rounded-lg overflow-hidden shadow-lg"
+        >
+          <video
+            class="w-824 h-466.41 mx-auto object-cover"
+            controls=""
+            id="bookingVideo"
+            poster="https://placehold.co/466.26x824/png?text=Video+minh+h%E1%BB%8Fa+kh%C3%A1ch+%C4%91%E1%BA%B7t+xe"
+            preload="metadata"
+          >
+            <source
+              src=".//ảnh/video/mp4 quảng taxi út hùng.mp4"
+              type="video/webm"
+            />
+            <source
+              src=".//ảnh/video/mp4 quảng taxi út hùng.mp4"
+              type="video/mp4"
+            />
+            Trình duyệt của bạn không hỗ trợ video.
+          </video>
+        </div>
+      </section>
+      <section class="mb-16 text-center" id="audio-intro">
+        <h3 class="text-3xl font-bold text-yellow-500 mb-8">
+          Giới thiệu dịch vụ Taxi Út Hùng
+        </h3>
+        <button
+          aria-label="Phát giới thiệu dịch vụ bằng giọng nói"
+          class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold px-6 py-3 rounded shadow"
+          id="btnSpeak"
+        >
+          <i class="fas fa-play mr-2"> </i>
+          Phát giới thiệu bằng giọng nói
+        </button>
+        <button
+          aria-label="Dừng phát giới thiệu dịch vụ"
+          class="bg-gray-400 hover:bg-gray-500 text-white font-semibold px-6 py-3 rounded shadow ml-4"
+          id="btnStop"
+        >
+          <i class="fas fa-stop mr-2"> </i>
+          Dừng phát
+        </button>
+      </section>
+      <section class="mb-16" id="reviews">
+        <h3 class="text-3xl font-bold text-yellow-500 mb-8 text-center">
+          Đánh giá khách hàng
+        </h3>
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+          <article class="bg-white rounded-lg shadow p-6 flex flex-col">
+            <div class="flex items-center mb-4">
+              <img
+                alt="Ảnh đại diện khách hàng nữ trẻ tuổi vui vẻ, tóc dài đen"
+                class="rounded-full mr-4"
+                height="60"
+                src="https://storage.googleapis.com/a1aa/image/272a6c0b-56d9-462a-a3c0-f8db3f47228b.jpg"
+                width="60"
+              />
+              <div>
+                <h4 class="font-semibold text-lg">Nguyễn Thị Lan</h4>
+                <p class="text-yellow-400">
+                  <i class="fas fa-star"> </i>
+                  <i class="fas fa-star"> </i>
+                  <i class="fas fa-star"> </i>
+                  <i class="fas fa-star"> </i>
+                  <i class="fas fa-star"> </i>
+                </p>
+              </div>
+            </div>
+            <p class="text-gray-700 flex-grow">
+              Tôi rất hài lòng với dịch vụ của Taxi Út Hùng. Tài xế nhiệt tình,
+              xe sạch sẽ và đúng giờ.
+            </p>
+          </article>
+          <article class="bg-white rounded-lg shadow p-6 flex flex-col">
+            <div class="flex items-center mb-4">
+              <img
+                alt="Ảnh đại diện khách hàng nam trung niên vui vẻ, tóc ngắn đen"
+                class="rounded-full mr-4"
+                height="60"
+                src="https://storage.googleapis.com/a1aa/image/a97298a9-cad4-49ce-53ce-918878487b81.jpg"
+                width="60"
+              />
+              <div>
+                <h4 class="font-semibold text-lg">Trần Văn Hùng</h4>
+                <p class="text-yellow-400">
+                  <i class="fas fa-star"> </i>
+                  <i class="fas fa-star"> </i>
+                  <i class="fas fa-star"> </i>
+                  <i class="fas fa-star"> </i>
+                  <i class="fas fa-star-half-alt"> </i>
+                </p>
+              </div>
+            </div>
+            <p class="text-gray-700 flex-grow">
+              Giá cả hợp lý, dịch vụ chuyên nghiệp. Tôi luôn chọn Taxi Út Hùng
+              khi cần di chuyển.
+            </p>
+          </article>
+          <article class="bg-white rounded-lg shadow p-6 flex flex-col">
+            <div class="flex items-center mb-4">
+              <img
+                alt="Ảnh đại diện khách hàng nữ trung niên cười tươi, tóc ngắn nâu"
+                class="rounded-full mr-4"
+                height="60"
+                src="https://storage.googleapis.com/a1aa/image/5e001b2d-4797-4643-1d87-e311981a7589.jpg"
+                width="60"
+              />
+              <div>
+                <h4 class="font-semibold text-lg">Lê Thị Mai</h4>
+                <p class="text-yellow-400">
+                  <i class="fas fa-star"> </i>
+                  <i class="fas fa-star"> </i>
+                  <i class="fas fa-star"> </i>
+                  <i class="fas fa-star"> </i>
+                  <i class="fas fa-star"> </i>
+                </p>
+              </div>
+            </div>
+            <p class="text-gray-700 flex-grow">
+              Tài xế thân thiện, xe mới và sạch sẽ. Tôi rất yên tâm khi sử dụng
+              dịch vụ.
+            </p>
+          </article>
+        </div>
+      </section>
+      <section class="mb-16" id="gallery">
+        <h3 class="text-3xl font-bold text-yellow-500 mb-8 text-center">
+          Hình ảnh Taxi Út Hùng
+        </h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
+          <img
+            alt="Xe taxi đời mới màu vàng sáng bóng đỗ trên đường phố thành phố ban ngày, trời nắng, xe hiện đại"
+            class="rounded-lg shadow-md object-cover w-full h-48"
+            height="300"
+            src="./ảnh/man-driving-car-from-rear-view.jpg"
+            width="400"
+          />
+          <img
+            alt="Xe taxi 7 chỗ màu vàng sang trọng đỗ trước tòa nhà văn phòng hiện đại"
+            class="rounded-lg shadow-md object-cover w-full h-48"
+            height="300"
+            src="./ảnh/pexels-mikebirdy-116675.jpg"
+            width="400"
+          />
+          <img
+            alt="Tài xế taxi Út Hùng mặc đồng phục màu vàng, mỉm cười chào khách"
+            class="rounded-lg shadow-md object-cover w-full h-48"
+            height="300"
+            src="./ảnh/pexels-mikebirdy-120049.jpg"
+            width="400"
+          />
+          <img
+            alt="Khách hàng vui vẻ ngồi trên xe taxi màu vàng, cảnh nội thất xe sạch sẽ"
+            class="rounded-lg shadow-md object-cover w-full h-48"
+            height="300"
+            src="https://storage.googleapis.com/a1aa/image/e9ea702b-834d-4fad-5f91-a976dba66723.jpg"
+            width="400"
+          />
+          <img
+            alt="Xe taxi Út Hùng màu vàng đưa đón khách tại sân bay với hành lý lớn"
+            class="rounded-lg shadow-md object-cover w-full h-48"
+            height="300"
+            src="./ảnh/xe4chotaxi.jpg.jpg"
+            width="400"
+          />
+          <img
+            alt="Đội ngũ tài xế taxi Út Hùng mặc đồng phục màu vàng đứng chụp hình tập thể"
+            class="rounded-lg shadow-md object-cover w-full h-48"
+            height="300"
+            src="./ảnh/xe4chouthung2,jpg.jpg"
+            width="400"
+          />
+          <img
+            alt="Giao diện ứng dụng đặt xe Taxi Út Hùng trên điện thoại thông minh"
+            class="rounded-lg shadow-md object-cover w-full h-48"
+            height="300"
+            src="./ảnh/ảnh taxi út hùng2.jpg"
+            width="400"
+          />
+          <img
+            alt="Khách hàng cười tươi hài lòng sau khi sử dụng dịch vụ taxi Út Hùng"
+            class="rounded-lg shadow-md object-cover w-full h-48"
+            height="300"
+            src="./ảnh/postertaxi.jpg.jpg"
+            width="400"
+          />
+        </div>
+      </section>
+      <section
+        class="bg-yellow-400 rounded-lg p-8 max-w-4xl mx-auto text-white"
+        id="contact"
+      >
+        <h3 class="text-3xl font-bold mb-6 text-center">
+          Liên hệ với chúng tôi
+        </h3>
+        <div
+          class="flex flex-col md:flex-row md:justify-around space-y-6 md:space-y-0"
+        >
+          <div class="flex items-center space-x-4">
+            <i class="fas fa-phone-alt fa-2x"></i>
+            <div>
+              <p class="font-semibold text-lg">Điện thoại</p>
+              <a
+                class="hover:underline text-white text-lg"
+                href="tel:0965028081"
+                >0965 028 081</a
+              >
+            </div>
+          </div>
+          <div class="flex items-center space-x-4">
+            <i class="fab fa-facebook-messenger fa-2x"></i>
+            <div>
+              <p class="font-semibold text-lg">Zalo</p>
+              <a
+                class="hover:underline text-white text-lg"
+                href="https://zalo.me/0965028081"
+                rel="noopener noreferrer"
+                target="_blank"
+                >0965 028 081</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-gray-800 text-gray-300 py-6 mt-12">
+      <div class="container mx-auto text-center text-sm">
+        © 2024 Taxi Út Hùng. Bản quyền thuộc về Taxi Út Hùng.
+      </div>
+    </footer>
+    <script>
+      const btnSpeak = document.getElementById("btnSpeak");
+      const btnStop = document.getElementById("btnStop");
+      let synth = window.speechSynthesis;
+      let utterance = null;
+
+      btnSpeak.addEventListener("click", () => {
+        if (synth.speaking) {
+          synth.cancel();
+        }
+        const text =
+          "Chào mừng quý khách đến với Taxi Út Hùng. Chúng tôi cung cấp dịch vụ taxi 4 chỗ, 7 chỗ và đưa đón sân bay với đội ngũ tài xế chuyên nghiệp, thân thiện và xe đời mới, sạch sẽ. Taxi Út Hùng cam kết mang đến cho bạn chuyến đi an toàn, nhanh chóng và thoải mái. Hãy gọi ngay số 0965 028 081 để được phục vụ tốt nhất.";
+        utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = "vi-VN";
+
+        // Chọn giọng tiếng Việt nếu có
+        const voices = synth.getVoices();
+        const vnVoice = voices.find(
+          (voice) => voice.lang === "vi-VN" || voice.lang.startsWith("vi")
+        );
+        if (vnVoice) {
+          utterance.voice = vnVoice;
+        }
+
+        synth.speak(utterance);
+      });
+
+      btnStop.addEventListener("click", () => {
+        if (synth.speaking) {
+          synth.cancel();
+        }
+      });
+    </script>
+  </body>
+</html>
