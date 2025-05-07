@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đặt Xe - Taxi Út Hùng</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+        background-color: #000;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .container {
+        background-color: #1a1a1a;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 0 20px rgba(255, 221, 0, 0.4);
+        width: 100%;
+        max-width: 400px;
+      }
+      h2 {
+        text-align: center;
+        color: #ffcc00;
+        margin-bottom: 20px;
+      }
+      input,
+      button {
+        width: 100%;
+        padding: 12px;
+        margin: 10px 0;
+        border-radius: 8px;
+        border: none;
+        font-size: 16px;
+      }
+      input {
+        background-color: #333;
+        color: #fff;
+      }
+      button {
+        background-color: #ffcc00;
+        color: #000;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #e6b800;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Đặt Xe Taxi Út Hùng</h2>
+      <form id="booking-form">
+        <input
+          type="text"
+          name="name"
+          placeholder="Họ tên khách hàng"
+          required
+        />
+        <input type="tel" name="phone" placeholder="Số điện thoại" required />
+        <input type="text" name="pickup" placeholder="Điểm đón" required />
+        <input type="text" name="destination" placeholder="Điểm đến" required />
+        <input type="datetime-local" name="date" required />
+        <input type="number" id="km" placeholder="Số km dự kiến" required />
+        <input type="hidden" name="fare" id="fare" />
+        <button type="submit">Đặt xe</button>
+      </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init("wvvXjSUGT5bKKXK3t"); // Thay bằng user ID của bạn
+      })();
+
+      document
+        .getElementById("booking-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const km = parseFloat(document.getElementById("km").value);
+          const fare = km * 10000;
+          document.getElementById("fare").value = fare;
+
+          emailjs.sendForm("service_hzvc1ck", "template_z72p7jb", this).then(
+            function () {
+              alert("Đặt xe thành công! Chúng tôi sẽ liên hệ ngay.");
+            },
+            function (error) {
+              alert("Lỗi khi gửi thông tin: " + error);
+            }
+          );
+        });
+    </script>
+  </body>
+</html>
